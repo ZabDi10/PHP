@@ -10,10 +10,13 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2U9ST59E7VQCuYnDNKoRgrBH8a2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,6 +27,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/xampp/htdocs/PHP",
     "vue.rearranger.settings.migration": "true"
   }
@@ -37,6 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1692350307918</updated>
       <workItem from="1692350308982" duration="20000" />
+      <workItem from="1692360841347" duration="15000" />
     </task>
     <servers />
   </component>
