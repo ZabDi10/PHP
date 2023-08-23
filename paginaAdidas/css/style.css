@@ -1,0 +1,67 @@
+body{
+    margin: auto;
+    font-family: Arial;
+    width: 100%;
+}
+.logo{
+    width: 10%;
+}
+.navegador{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+}
+.oculto{
+    color: white;
+}
+.sidenav{
+    display: flex;
+    align-items: center;
+
+}
+.sidenav a{
+    padding: 20px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+.video{
+    text-align: center;
+    width: 100%;
+}
+.video video{
+    padding-top: 107px;
+}
+
+.imagenes .zapa{
+    width: 15%;
+    padding: 20px;
+    border: 1px solid black;
+
+}
+.imagenes{
+    margin: auto;
+    margin-top: 20px;
+    width: 70%;
+    display: block;
+
+}
+.imagenes div{
+    display: flex;
+    justify-content: center;
+}
+.tituloZ{
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 80px;
+}
+.amarilla{
+   width: 100%;
+
+
+}
