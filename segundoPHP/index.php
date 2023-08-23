@@ -120,9 +120,8 @@ echo "El usuario que utilizo es " , $usuario;
         $i++;
         echo "<br>";
     }
-    echo "<hr>";
 
-    echo "<h2>Tablas de multiplicar con while</h2>";
+
 ?>
 </body>
 <script src="js/script.js"></script>
