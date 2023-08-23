@@ -104,6 +104,25 @@ echo "El usuario que utilizo es " , $usuario;
         }
         echo "<br>";
     }
+    echo "<hr>";
+    echo "<h2>Dia 23/08/2023</h2>";
+    echo "<h2>Tablas de multiplicar con while</h2>";
+    echo "<p>Atentos a esto que con while al terminar el segundo bucle x se queda con 10 luego hay que resetear x siempre que salga del segundo bucle</p>";
+
+    $i = 1;
+
+    while($i<=10){
+        $x = 0;
+        while($x<=10){
+            echo "$i x $x = " . $i * $x . "<br>";
+            $x++;
+        }
+        $i++;
+        echo "<br>";
+    }
+    echo "<hr>";
+
+    echo "<h2>Tablas de multiplicar con while</h2>";
 ?>
 </body>
 <script src="js/script.js"></script>
