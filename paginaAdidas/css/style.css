@@ -4,7 +4,8 @@ body{
     width: 100%;
 }
 .logo{
-    width: 10%;
+    width: 6%;
+    opacity: 100%;
 }
 .navegador{
     display: flex;
@@ -13,6 +14,7 @@ body{
     z-index: 1;
     background-color: white;
     width: 100%;
+
 }
 .oculto{
     color: white;
@@ -20,6 +22,7 @@ body{
 .sidenav{
     display: flex;
     align-items: center;
+    opacity: 100%;
 
 }
 .sidenav a{
@@ -27,21 +30,25 @@ body{
     color: black;
     text-decoration: none;
     cursor: pointer;
+    font-size: 25px;
+    font-family: sans-serif;
 
+}
+
+.sidenav a:hover{
+    color: white;
+    background-color: black;
 }
 .video{
     text-align: center;
-    width: 100%;
+    padding-top: 50px;
 }
 .video video{
-    padding-top: 107px;
+    width: 100%;
 }
 
 .imagenes .zapa{
-    width: 15%;
-    padding: 20px;
-    border: 1px solid black;
-
+    width: 100%;
 }
 .imagenes{
     margin: auto;
@@ -59,9 +66,101 @@ body{
     display: block;
     text-align: center;
     padding: 80px;
+    font-family: Candara;
 }
 .amarilla{
    width: 100%;
+    cursor: pointer;
+}
+.caja{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+}
+.parrafo{
+    display: flex;
+    font-size: 18px;;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+}
+.pp{
+    text-align: center;
+    width: 50%;
+}
+.img1{
+   width: 50%;
+}
 
+.img2{
+    display: flex;
+}
+#formTC, #formPP{
+    display: none;
+}
+/* Cajas de las zapatillas */
+.cajas {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+.imageZ {
+  display: block;
+  width: 150%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(173, 173, 173); /* Black see-through */
+  color: #ffffff;
+  width: 150%;
+  transition: .75s ease;
+  opacity:0;
+  font-size: 20px;
+
+  text-align: center;
+}
+
+.cajas:hover .overlay {
+  opacity: 1;
+}
+
+
+
+@media (width>=1024px){ /* PC */
+    #forma{
+        width: 50%;
+        margin: auto;
+    }
+
+}
+@media (width>=767px){ /* Tablet */
+    #forma{
+        width: 70%;
+        margin: auto;
+    }
+
+}
+@media (width<767px){ /* Smartphone */
+    #forma{
+        width: 90%;
+        margin: auto;
+    }
+    .listaFP{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+    }
+    .pa{
+        margin: 0px;
+    }
 
 }

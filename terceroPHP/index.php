@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>28/08</title>
+    <title>23/08</title>
 </head>
 <body>
 <?php
@@ -56,7 +56,7 @@ $cadena = "Hola que tal";
         echo "La variable \$nombre se borro";
     }
     echo "<hr>";
-    echo "<h2>Parse</h2>";
+    echo "<h2>Casting</h2>";
     $valor="12345"; //Tipo cadena
     echo "<br> \$valor ";
     var_dump($valor); //$valor string(5) "12345"
@@ -107,6 +107,77 @@ $cadena = "Hola que tal";
     echo "<h2>Metodos de redondeo round()</h2>";
     $valorDecimal = 59.98;
     echo "El valor de \$valorDecimal = " . round($valorDecimal);
+
+    echo "<hr>";
+    echo "<h1>24/08</h1>";
+    echo "<h2>Ambito de las variables</h2>";
+
+    //Ambito de las variables
+    //Ambito local se refiere que su utilidad y valor esta dentro de una funcion
+
+    function variableLocal(){
+        $miVariable = 5; //Variable de ambito local
+        echo "Mi variable \$miVarible tiene valor de $miVariable";
+    }
+    variableLocal();
+    echo "<br>";
+    $miVariableG = 15;
+    function variableGlobal(){
+        global $valorDecimal, $miVariableG;
+        $miVariableG += $valorDecimal;
+        echo "Ahora \$miVaraibleG vale $miVariableG";
+
+    }
+    variableGlobal();
+    echo "<br> Ahora \$miVariableG fuera de la funcion tiene un valor de $miVariableG";
+    echo "<br>";
+    variableGlobal();
+    echo "<br> Ahora \$miVariableG fuera de la funcion tiene un valor de $miVariableG";//Puedo manejarla fuera de la funcion;
+
+    //Variables static su valor se ve afectado cada vez que se invoca la función. Es convertir una variable local en usable cuando su valor se invoque nuevamente la funcion
+
+    function variableStatic(){
+        static $edad = 18;
+        echo "<br> La edad es $edad";
+        $edad++;
+    }
+    variableStatic();
+    variableStatic();
+    variableStatic();
+    unset($edad);//Despues que no le necesito puedo eliminarla -> No, porque es estatica.
+    variableStatic();
+
+    //Ejercicio: Declara tres funciones como las anteriores, donde exista
+    // 1) una que sus variables locales sean $x y $y, realiza una suma entre ellas.
+    // 2) declara una variable llamada $yy y declarara dentro de la funcion como global e incrementala en 2, muestra su valor fuera de la función.
+    // 3) Crea una funcion llamanda puntuacion, y dentro declara una variable static llamada puntos, incrementala cada vez que se invoque y muestra su valor.
+
+    echo "<hr>";
+    echo "<h2>EJERCICIO</h2>";
+    function local(){
+        $x = 4;
+        $y = 6;
+        echo "\$x + \$y = " . $x+$y. "<br>";
+    }
+    local();
+    $yi = 4;
+    function globall(){
+        global $yi;
+        $yi++;
+        $yi++;
+    }
+
+    globall();
+    echo "\$yi es igual a $yi";
+
+    function puntuacion(){
+        static $puntos = 0;
+        echo "<br> Tienes $puntos puntos";
+        $puntos++;
+    }
+    puntuacion();
+    puntuacion();
+
 ?>
 </body>
 </html>
