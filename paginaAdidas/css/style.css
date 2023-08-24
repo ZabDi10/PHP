@@ -50,16 +50,19 @@ body{
 .imagenes .zapa{
     width: 100%;
 }
+.contenedor{
+    margin-bottom: 1%;
+}
 .imagenes{
     margin: auto;
     margin-top: 20px;
-    width: 70%;
+    width: 100%;
     display: block;
 
 }
 .imagenes div{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .tituloZ{
     margin: auto;
