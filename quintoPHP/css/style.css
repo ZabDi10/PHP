@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.container, .container1{
+    background-color: black;
+    padding: 0px;
+
+
+}
+.container1{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+}
+.container1 a{
+    color: white;
+    display: flex;
+    justify-content: center;
+
+}
+.container1 div{
+    display: flex;
+    justify-content: center;
+}
+.container1 a:hover{
+    color: darkred;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    list-style: none;
+
+}
+li{
+    display: inline;
+    padding: 17px;
+    cursor: pointer;
+
+}
+li:hover{
+    text-decoration: underline;
+    text-decoration-color: darkred;
+    text-decoration-thickness: 5px;
+    color: darkred;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+h1{
+    text-align: center;
+}
+.formulario form{
+    text-align: center;
+    background-color: #dadada;
+    font-family: sans-serif;
+    font-size: 17px;
+    padding: 50px;
+}
+.formulario form .datos{
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.formulario form .datos:hover{
+    border: 1px solid darkred;
+}
+.formulario form lable{
+    width: 70%;
+    display: inline-block;
+}
+.formulario form .boton{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius:30px;
+    padding: 8px;
+    width: 100px;
+}
+.formulario form .boton:hover{
+    background-color: darkred;
+    color: white;
+    border: 1px solid white;
+}
+@media only screen and (max-width: 768px){
+    .formulario{
+        width: 90%;
+        font-size: 300px;
+    }
+}
