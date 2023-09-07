@@ -5,11 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="container1">
+    <div  class = "footer1">
         <div>
             <a href="#">Realizado por Diego Alonso Zaballos Pacios</a>
         </div>
-
     </div>
 </body>
 </html>
