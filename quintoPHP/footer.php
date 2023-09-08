@@ -7,7 +7,7 @@
 <body>
     <div  class = "footer1">
         <div>
-            <a href="#">Realizado por Diego Alonso Zaballos Pacios</a>
+            <a href="#">C\ EnUnMundoIdeal, n87</a>
         </div>
     </div>
 </body>

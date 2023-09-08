@@ -5,24 +5,24 @@ window.addEventListener("load", () => {
 function validarFormulario(e){
     e.preventDefault();
     // alert("validando.....");
-    let nombre= document.querySelector("#nombre");
+    let data= document.querySelectorAll(".datos");
     let email= document.querySelector('#email');
-    console.log(data);
-    if (!nombre.value){
-        nombre.style.backgroundColor='pink';
-        return;
-    }
-    if(!email.value){
-        email.style.backgroundColor='pink';
-        return;
-    }
+    // if (!nombre.value){
+    //     nombre.style.backgroundColor='pink';
+    //     return;
+    // }
+    // if(!email.value){
+    //     email.style.backgroundColor='pink';
+    //     return;
+    // }
 
-    // data.forEach(item, ()=>{
-    //     if (!item.value){
-    //             item.style.backgroundColor='pink';
-    //
-    //     }return;
-    // });
+    data.forEach(element => {
+        if (!element.value){
+            element.style.backgroundColor='pink';
+            return;
+        }
+
+    });
 
 
     this.submit();
