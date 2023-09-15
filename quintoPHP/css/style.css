@@ -149,9 +149,6 @@ h1, h2, h3{
     justify-content: center;
     padding-top: 80px;
 }
-.salto{
-    margin-top: 30px !important;
-}
 .falsa{
     height: 70px;
     width: 100%;
@@ -202,9 +199,9 @@ h1, h2, h3{
 h3{
     font-size: xx-large;
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 1000px){
     .menuItem3{
-        padding-right: 0;
+        padding-right: 0px;
     }
 }
 

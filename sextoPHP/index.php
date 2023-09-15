@@ -23,7 +23,8 @@
 //            Funcion para enviar a imprimir con salto de lineas
             $numero = -365;
             function mostrar($cad){ // paso de parametros
-                echo $cad. "<br>";
+               echo $cad. "<br>";
+
             }
             //Enviar el avlor absoluto de -365
             mostrar("El valor absoluto de -365 es ".abs($numero));
@@ -104,10 +105,10 @@
 
             //compara las dos cadenas strcmp compara mayus y minus si no son iguales da un numero negativo
             echo "<h4>strcmp</h4>";
-            mostrar("Las dos cadenas son iguales(-no +si) " . strcmp($cadena, $otraCadena));
+            mostrar("Las dos cadenas son iguales(-+no 0si) " . strcmp($cadena, $otraCadena));
             echo "<h4>strcasecmp</h4>";
             // compara con strcasecmp si da 0 es porque so iguales pero no toma en cuenta las mayus o minus
-            mostrar("Las dos cadenas son iguales(-no +si) " . strcasecmp($cadena, $otraCadena));
+            mostrar("Las dos cadenas son iguales(-+no 0si) " . strcasecmp($cadena, $otraCadena));
             //Comparar con un if y decir si son iguales o no
             echo "<h4>Comparar</h4>";
             $otraCadena=strtoupper($otraCadena);
@@ -125,9 +126,111 @@
              * mientras que strcasecmp no lo es.
              *
              */
+
             ?>
+            <h2>Dar formato a una salida de número</h2>
+            <?php
+                $numero=13254.853;
+                mostrar("number_format() ->" . number_format($numero));
+                mostrar("number_format($numero,1) -> Muestra 1 decimal -> " . number_format($numero,1));
+                mostrar("number_format($numero,2,',','.') -> Muestra 1 decimal -> " . number_format($numero,2,","," "));
 
+            ?>
+            <h2>Dar formato a una cadena</h2>
+            <?php
+            /*
+             * Sprintf devuelve el resultado en forma, mientras que printf muestra directamente el resultado (como la instruccion echo) y devuelve la longitud de la cadena.
+             * Importante: siempre la cadenas de formato comienzan con el %seguido de 5 o menos
+             *
+             */
+            //d -> digito f -> float c -> caracter
+            //longitud de como se quiere que se muestre
+            $numero = 23;
+            mostrar("El $numero con un nuevo formato de ceros delante es ". sprintf("%05d",$numero));
+            mostrar("El $numero con un nuevo formato de ceros delante es ". sprintf("%.2f",$numero));
+            mostrar("El $numero con un nuevo formato de ceros delante es ". sprintf("%2f",$numero));
+            $numero = sprintf("%f", $numero);//sprintf puede asignar a una variable el formato que le indiques
+            mostrar("Ahora \$numero es -> $numero");
+            $dia = 1;
+            $mes = 6;
+            $anio=2023;
+            mostrar("La fecha es : " . sprintf("%02d/%02d/%04d", $dia,$mes,$anio));
+            ?>
+            <form method="get">
+                <input type="date" name="fecha">
+                <input type="submit" name="enviar" value="Enviar">
+            </form>
+            <?php
+            if (isset($_GET["enviar"])){
+                $fecha=$_GET["fecha"];
+                mostrar($fecha);
+            }
+            //unset($variable) -> destruye la variable
+            $cadena=sprintf("",$cadena);//genera y asigna el formato a $cadena
+            printf("",$cadena)//muestra directamene el formato sin pasar por echo.
+            ?>
+            <h2>Estas funciones permiten eliminar los caracteres "blancos"</h2>
+            <?php
+            //Eliminar espacios en blanco del principio y final de una cadena
+            $cadena=" Es un ejemplo   a        ";
+            mostrar( "La cadena tiene ".strlen($cadena). " digitos");
+            mostrar(trim($cadena));
+            mostrar( "La cadena tiene ".strlen(trim($cadena)). " digitos");
+            ?>
+            <h2>Remplazar una cadena en otra</h2>
+            <?php
+            $cadena1=array("a","e","i","o","u","A","E","I","O","U","m","M");
+            $cadena3="Porque negra tengo el alma";
+            $cadena2=array("4","3","1","0","5","4","3","1","0","5","?","?");
+            mostrar(str_replace($cadena1,$cadena2,$cadena3));
+            //con el algoritmo anterior, creo una contraseña segura
+            $cadena3 = "TotillamCebolla";
+            mostrar(str_replace($cadena1,$cadena2,$cadena3)."$");
+            $abc= array('a','b','c','d','e','f','g','h','i','j','k','l', 'ñ','m','n','o','p','q','r','s','t','u','v','w','x','y','z', ' ');
+            $cifrado= array('4','b','$','2','3','✨','6','h','1','j','k','L', 'ñ','%','😶‍🌫️','0','·','9','r','s','t','5','v','w','!','♥','?', "__");
+            $res = "El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña tocaba el saxofón detrás del palenque de paja.";
+             mostrar(str_replace($abc,$cifrado,$res)."$");
+             $res = str_replace($abc,$cifrado,$res);
+             mostrar(str_replace($cifrado,$abc,$res));
+            ?>
+            <h2>Calcula el hash md5 de un string</h2>
+            <p>hash es utilizado para contraseñas, por ejemplo: Wordpress. </p>
+            <?php
+            $password= "Desarrollo";
+            $newPass=md5($password);
+            mostrar("La contraseña $password en MD5 es " . $newPass);
+            ?>
+            <h2>Convierte en array la cadena mediante el delimitador</h2>
+            <?php
+            $cadenaTexto = "es una prueba de una cadena con espacios";
+            $arrayTexto = explode(" ",$cadenaTexto);
+            var_dump($arrayTexto);
+            echo "<br>";
+            echo "<h2>Ejercicio</h2>";
+            /*
+             * Práctica :
+             *
+             * 1.Con el siguiente texto:
+             * Frase de Gandhi sobre la forma de vivir "Vive como si fueras a morir mañana. Aprende como si fueras a vivir siempre".
+             * a) muestra la primera linea todo en mayuscula ,la segunda la primera letra en mayuscula y el resto en minuscula
+             * b)muestra toda la frase en minuscula
+             * c)Dime cuantos caracteres tiene cada frase
+             * d)Remplaza las letras segun el primer algoritmo realizado a->4etc
+             * e)Calcula el md5 del título
+             * f)Transforma las frases en array
+             */
+            $primeraF = "Vive como si fueras a morir mañana.";
+            $segundaF = "Aprende como si fueras a vivir siempre.";
+            $frase= $primeraF . $segundaF;
+            mostrar("Apartado a) " . mb_strtoupper($primeraF) . " " . ucfirst(strtolower($segundaF)));
+            mostrar("Apartado b) " . strtolower($primeraF). " " . strtolower($segundaF));
+            mostrar("Apartado c) " . str_replace($cadena1,$cadena2,$frase));
+            mostrar("Apartado e) " . md5($frase));
+            mostrar("Apartado f) ");
+            var_dump(explode(" ", $frase));
+            echo "<br>";
 
+            ?>
         </div>
     </div>
     <div class="col-6 cuadro">
