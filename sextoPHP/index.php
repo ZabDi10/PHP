@@ -232,11 +232,51 @@
 
             ?>
         </div>
+        <div class="col-6 centrado">
+            <h2>Comienza por str_starts_with</h2>
+            <?php
+            if (str_starts_with($frase,"F")){
+                mostrar("La cadena comienza por F");
+
+            }else{
+                mostrar("La cadena comienza por " . substr($frase, 0, 1));
+            }
+            ?><h2>Termina por str_end_with</h2>
+            <?php
+            if (str_ends_with($frase,"e")){
+                mostrar("La cadena termina con una e");
+
+            }else{
+                mostrar("La cadena termina por " . substr($frase, strlen($frase)-2, 1));
+            }
+            ?>
+            <h2>Ejercicio</h2>
+<!--            Crea un array de al menos 10 nombres que   comiencen por a,b,c y luego muestra solo los que comiencen con b-->
+            <?php
+            $nombres = array("Antoñito","Anita","Alonso","Berengario","Bonifacio","Barbara","Carlos","Catwoman","Carmen","Diego");
+            foreach ($nombres as $nom){
+                if (str_starts_with($nom,"B")||str_starts_with($nom,"b")){
+                    mostrar($nom);
+                }
+            }
+            ?>
+            <h2>Extraer una cadena en una subcadena</h2>
+            <?php
+            $cadena = "Hola, como te llamas";
+            mostrar($cadena);
+            mostrar(substr($cadena, 0,4));
+            mostrar(substr($cadena, 6)); // si no indico la longitud, trae desde el indice el resto de la cadena
+            ?>
+            <h2>Repetir una cadena un determinado número de veces -> str_repeat</h2>
+            <?php
+                mostrar(str_repeat("Hola-", 10));
+            ?>
+        </div>
     </div>
-    <div class="col-6 cuadro">
+    <div class="col-6 cuadroR2">
 
     </div>
-    <div class="col-6 cuadroL">
+    <div class="col-6 cuadroL2">
 
     </div>
 </body>

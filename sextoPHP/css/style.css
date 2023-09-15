@@ -34,14 +34,20 @@
         width: 100%;
     }
 }
-.cuadro{
+.cuadro, .cuadroL2{
     background: darkred;
-    margin-bottom: 8px;
 }
-.cuadroL{
+.cuadroL,.cuadroR2{
     background: #ff4f4f;
+}
+.cuadro, .cuadroR2{
+    margin-bottom: 8px;
+    border: 0;
+}
+.cuadroL, .cuadroL2{
     float: right;
     margin-bottom: 8px;
+    border: 0;
 }
 hr{
     border:1px solid #ff4f4f;
