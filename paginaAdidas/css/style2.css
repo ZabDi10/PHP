@@ -1,0 +1,19 @@
+.botones{
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.caja{
+    text-align: center;
+    padding-top: 300px;
+}
+.botones:hover{
+    background-color: white;
+    color: black;
+}

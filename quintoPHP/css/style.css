@@ -83,6 +83,9 @@ body{
 .raya{
     margin: 0;
 }
+
+
+
 /* Formulario */
 .registro{
     margin-top: 25px;
@@ -92,6 +95,8 @@ body{
     width: 50%;
 
 }
+
+/*Formulario*/
 .formulario{
     display: flex;
     justify-content: center;
