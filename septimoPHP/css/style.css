@@ -34,10 +34,16 @@ html {
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 970px){
 
     .logo{
         width: 320px;
+    }
+}
+@media only screen and (max-width: 850px){
+
+    .logo{
+        width: 300px;
     }
 }
 @media only screen and (max-width: 826px) {
@@ -126,7 +132,7 @@ html {
 .input-izquierda{
     float: left;
 }
-.formulario input[type="text"], .formulario input[type="email"]{
+.formulario input[type="text"], .formulario input[type="email"], .formulario input[type="number"]{
     font-size: 14px;
     border: none;
     border-bottom: 0.5px solid #45BDA4;
@@ -148,6 +154,7 @@ html {
     font-size: 15px;
     color: #f2f2f2;
     cursor: pointer;
+    text-decoration: none;
 
 }
 .acciones{
@@ -170,4 +177,8 @@ html {
 .centrado input{
     margin: 0 25px 0 25px;
     width: 100px;
+}
+hr{
+    border : none;
+    height: 50px;
 }
