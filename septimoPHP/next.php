@@ -1,4 +1,18 @@
 <?php
+
+    session_start(); //abrimos la sesion
+    if (!empty($_POST["dni"]) && !empty($_POST["movil"]) && !empty($_POST["email"]) && !empty($_POST["email2"])){
+        if ($_POST["email"] == $_POST["email2"]){
+            $_SESSION["dni"]=$_POST["dni"];
+            $_SESSION["movil"]=$_POST["movil"];
+            $_SESSION["email"]=$_POST["email"];
+            $_SESSION["email2"]=$_POST["email2"];
+        }else{
+            header("Location:http://localhost:63342/PHP/septimoPHP/index.php?mensaje=Los email deben ser iguales");
+        }
+    }else{
+        header("Location:http://localhost:63342/PHP/septimoPHP/index.php?mensaje=Por favor complete los campos del formulario");
+    }
     include "header.php";
 ?>
 <div class="caja-negra">
@@ -35,6 +49,17 @@
             <input type="submit" value="Siguiente" class="boton" name="enviar">
             <input type="reset" value="Limpiar" class="boton">
         </p>
+        <div class="acciones">
+            <?php
+            $mensaje="";
+
+            if (isset($_GET["mensaje"])){
+                $mensaje = $_GET["mensaje"];
+                echo $mensaje;
+            }
+
+            ?>
+        </div>
     </form>
 </div>
 <script src="js/script.js"></script>

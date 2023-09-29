@@ -1,4 +1,15 @@
 <?php
+    session_start(); //abrimos la sesion
+    if (!empty($_POST["nombre"]) && !empty($_POST["apellido"]) && !empty($_POST["apellido2"]) && !empty($_POST["edad"])){
+
+            $_SESSION["nombre"]=$_POST["nombre"];
+            $_SESSION["apellido"]=$_POST["apellido"];
+            $_SESSION["apellido2"]=$_POST["apellido2"];
+            $_SESSION["edad"]=$_POST["edad"];
+
+    }else{
+        header("Location:http://localhost:63342/PHP/septimoPHP/next.php?mensaje=Por favor complete los campos del formulario");
+    }
     include "header.php";
 ?>
 <div class="caja-negra">
@@ -21,5 +32,7 @@
     <h3>¡Gracias por dejarnos ser tu banco!</h3>
     </div>
     <hr>
-    <a href="https://google.es" class="boton">Finalizar</a>
+    <a href="cliente.php" class="boton">Finalizar</a>
 </div>
+
+
