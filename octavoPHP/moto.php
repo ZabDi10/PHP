@@ -88,5 +88,5 @@ if ($_GET["cc"]!="" && $_GET["marca"]!="" && $_GET["tipo"]!=""){
     $nuevoMoto = new moto($color,$potencia,$marca);
     mostrarDatosMoto($nuevoMoto);
 }else{
-    header("Location: http://localhost:63342/PHP/octavoPHP/index1.php?msn=Los campos son obligatorios");
+    header("Location: http://localhost:63342/PHP/octavoPHP/formularioMoto.php?msn=Los campos son obligatorios");
 }

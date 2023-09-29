@@ -1,18 +1,91 @@
+*{
+    font-family: sans-serif;
+
+}
+.cuerpo{
+    background-color: #ff4f4f;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+h1,.menu, .cuerpo{
+    width: 55%;
+    margin: auto;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 0;
+}
+.menu a{
+    margin: 25px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+}
+.menu a:hover{
+    color: black;
+
+}
+
+.menu img{
+    padding: 15px;
+    border-radius: 30px;
+    border: 0;
+    background-color: white;
+}
+
+.menu img:hover{
+    filter: invert();
+
+}
+
 .container{
-    padding: 10% 0;
-    width: 50%;
-    background-color: #dadada;
+    padding: 5% 0;
+    width: 40%;
+    background-color: #ff4f4f;
+    color: white;
     text-align: center;
     margin: auto;
 }
+
 .error{
-    color: #f83c3c;
+    color: #2bb5ff;
+    margin: 0;
 }
 .formu input[type = "text"]{
     border-radius: 10px;
     border: 1px solid black;
     height: 18px;
     text-align: center;
+
+}
+.botones{
+    display: flex;
+
+}
+.enviar{
+    display: block;
+    width: 100px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.enviar:hover{
+    color: white;
+    background-color: black;
+}
+.enviar{
+    margin: 18px;
 }
 .formu{
     display: flex;

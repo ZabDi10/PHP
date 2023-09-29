@@ -112,7 +112,8 @@ mostrarDatosCoche($cocheAlumno1);
 //Crear funciones o metodos para asuntos repetitivos
 
 function mostrarDatosCoche($unCoche){
-    echo "<br> Mi coche es ". $unCoche -> getColor(). " y tiene una potencia de " . $unCoche-> getPotencia(). ". La marca es: " .$unCoche-> getMarca();
+    $clase = get_class($unCoche);
+    echo "<br> Mi " .$clase. " es ". $unCoche -> getColor(). " y tiene una potencia de " . $unCoche-> getPotencia(). ". La marca es: " .$unCoche-> getMarca();
 }
 
 $segundoCoche = new coche("Blanco","3.0cv","BMW");
@@ -125,6 +126,6 @@ if ($_GET["color"]!="" && $_GET["potencia"]!="" && $_GET["marca"]!=""){
     $nuevoCoche = new coche($color,$potencia,$marca);
     mostrarDatosCoche($nuevoCoche);
 }else{
-    header("Location: http://localhost:63342/PHP/octavoPHP/index.php?msn=Los campos son obligatorios");
+    header("Location: http://localhost:63342/PHP/octavoPHP/formularioCoche.php?msn=Los campos son obligatorios");
 }
 ?>
