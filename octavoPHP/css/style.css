@@ -1,0 +1,21 @@
+.container{
+    padding: 10% 0;
+    width: 50%;
+    background-color: #dadada;
+    text-align: center;
+    margin: auto;
+}
+.error{
+    color: #f83c3c;
+}
+.formu input[type = "text"]{
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 18px;
+    text-align: center;
+}
+.formu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
