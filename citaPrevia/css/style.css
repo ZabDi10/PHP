@@ -1,0 +1,72 @@
+*{
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+.head{
+    font-size: 30px;
+}
+.head, .formulario{
+    text-align: center;
+}
+.formulario{
+    border: 1px solid black;
+    width: 60%;
+    margin: auto;
+    box-shadow: 5px 5px 10px black;
+}
+.seleccion input[type="radio"]{
+    margin: 3px 20px 3px 0;
+}
+.datos{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+.caja3{
+    padding: 20px;
+}
+.caja, .caja1, .caja2{
+    padding: 10px;
+}
+.formulario input[type="text"], .formulario input[type="email"], .formulario input[type="date"]{
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    text-align: center;
+}
+.datos label{
+    padding: 20px;
+}
+.allowed{
+    cursor: not-allowed;
+}
+.cursor{
+    cursor: pointer;
+}
+.boton, .boton2{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    border: 1px solid black;
+}
+.boton2{
+    display: flex;
+    text-decoration: none;
+    width: 60px;
+    justify-content: center;
+    margin: auto;
+    height: 0px;
+    padding: 15px;
+    align-items: center;
+}
+.caja4{
+    padding: 5px 10px 25px 10px;
+}
+.politica{
+    color: black;
+}
+textarea{
+    height: 55px;
+}
