@@ -124,7 +124,7 @@ class solicitud
 
 
 }
-if ($_POST["nombre"]!="" && $_POST["email"]!="" && $_POST["telefono"]!=""&& $_POST["fecha"]!=""&& $_POST["hora"]!="" && $_POST["servicio"]){
+if ($_POST["nombre"]!="" && $_POST["email"]!="" && $_POST["telefono"]!=""&& $_POST["fecha"]!=""&& $_POST["hora"]!="" && $_POST["servicio"]!=""){
     $nombre = $_POST["nombre"];
     $email = $_POST["email"];
     $telefono = $_POST["telefono"];
@@ -140,6 +140,6 @@ if ($_POST["nombre"]!="" && $_POST["email"]!="" && $_POST["telefono"]!=""&& $_PO
     $_SESSION["seleccion"] = $solicitud -> getSeleccion();
     header("Location: http://localhost:63342/PHP/citaPrevia/end.php");
 }else{
-    header("Location: http://localhost:63342/PHP/citaPrevia/index.html?mensaje=Por favor complete los campos del formulario");
+    header("Location: http://localhost:63342/PHP/citaPrevia/index.php?mensaje=Por favor complete los campos del formulario");
 
 }

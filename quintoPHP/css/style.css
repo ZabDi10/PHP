@@ -17,7 +17,11 @@ body{
     width: 100%   !important;
 
 }
-
+.falsa{
+    height: 75px;
+    background-color: white;
+    width: 100%;
+}
 .footer1{
     bottom: 0;
     left: 0;
@@ -154,11 +158,6 @@ h1, h2, h3{
     justify-content: center;
     padding-top: 80px;
 }
-.falsa{
-    height: 70px;
-    width: 100%;
-
-}
 .banner img{
     width: 60%;
 }
@@ -220,7 +219,6 @@ h3{
     max-width: 1000px;
     position: relative;
     margin: auto;
-    padding-top: 80px;
 }
 
 /* Hide the images by default */
