@@ -32,7 +32,7 @@
     <h3>¡Gracias por dejarnos ser tu banco!</h3>
     </div>
     <hr>
-    <a href="cliente.php" class="boton">Finalizar</a>
+    <a href="../modelo/cliente.php" class="boton">Finalizar</a>
 </div>
 
 

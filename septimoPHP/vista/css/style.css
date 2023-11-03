@@ -122,6 +122,10 @@ html {
     width: 80%;
     margin: 50px auto 0px;
 }
+.login{
+    width: 15% !important;
+    margin: 0 auto !important;
+}
 .input-izquierda, .input-derecha{
     width: 45%;
     margin: 5px;
@@ -132,13 +136,16 @@ html {
 .input-izquierda{
     float: left;
 }
-.formulario input[type="text"], .formulario input[type="email"], .formulario input[type="number"]{
+.formulario input[type="text"], .formulario input[type="email"], .formulario input[type="number"],.login input{
     font-size: 14px;
     border: none;
     border-bottom: 0.5px solid #45BDA4;
     width: 100%;
     margin-top: 30px;
     outline: none;
+}
+.login input[type="password"],.login input[type=email]{
+    text-align: center;
 }
 .formulario p{
     font-size: 10px;

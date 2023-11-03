@@ -2,6 +2,7 @@ let cuadrado = document.querySelector("#casilla");
 
 
 if (document.getElementById("casilla")!=null){
+
     cuadrado.addEventListener("change", habilitar);
 }else{
 

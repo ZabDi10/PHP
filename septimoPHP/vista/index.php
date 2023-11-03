@@ -38,7 +38,7 @@
                     He leido y acepto la <a target="_blank" href="https://aepd.es">Politica de privacidad y de protección de datos</a>
                 </p>
                 <p class="centrado">
-                    <input type="submit" value="Siguiente" class="boton"  style="cursor: not-allowed" name="enviar">
+                    <input type="submit" value="Siguiente" class="boton" disabled style="cursor: not-allowed" name="enviar">
                     <input type="reset" value="Limpiar" class="boton">
                 </p>
             </div>
