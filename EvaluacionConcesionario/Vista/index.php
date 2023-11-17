@@ -9,13 +9,13 @@
         </div>
     </div>
     <div class="caja-blanca">
-        <p class="frase">Por favor complete los campos segun las indicaciones</p>
+        <p class="frase">Por favor complete los campos según las indicaciones</p>
         <form method="post" id="formulario" class="formulario" action="alta.php" novalidate>
             <div class="input-izquierda">
                 <input type="text" name="matricula" id="matricula" placeholder="1111-EEE" required>
-                <p>Matricula</p>
-                <input type="text" id="marca" name="marca" PLACEHOLDER="Citroen" >
-                <p>Marca del Vehiculo</p>
+                <p>Matricula*</p>
+                <input type="text" id="marca" name="marca" PLACEHOLDER="Citroen" required>
+                <p>Marca del Vehículo*</p>
                 <input type="text" name="motor" id="motor" placeholder="Gasolina/Diesel" >
                 <p>Motor</p>
                 <input type="text" id="cilindrada" name="cilindrada" PLACEHOLDER="1000" >
@@ -29,7 +29,7 @@
             </div>
             <div class="input-derecha">
                 <input type="text" id="bastidor" name="bastidor" PLACEHOLDER="111111" required>
-                <p>NºBastidor</p>
+                <p>NºBastidor*</p>
                 <input type="text" id="modelo" name="modelo" PLACEHOLDER="X-29" >
                 <p>Modelo</p>
                 <input type="text" name="precio" id="precio" placeholder="20000" >

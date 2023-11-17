@@ -1,0 +1,243 @@
+
+/*Color Verde: #45BDA4
+Color Amarillo: #F9B801
+*/
+
+
+
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
+}
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+@media only screen and (max-width: 970px){
+
+    .logo{
+        width: 320px;
+    }
+}
+@media only screen and (max-width: 850px){
+
+    .logo{
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 826px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+
+    }
+    .ancho{
+        flex-direction: column;
+    }
+    .logo{
+        width: 320px;
+    }
+}
+.derecha{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.ancho{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icono-verde{
+    font-size: 50px !important;
+    color: #45BDA4;
+}
+.ayuda{
+    font-size: 25px;
+    font-weight: bold;
+}
+.logo{
+    padding: 0px 0 0px 0;
+    max-width: 700px;
+    filter: invert(100%);
+}
+.caja-negra{
+    width: 70%;
+    background-color: #911818;
+    border: 0;
+    border-radius: 15px 15px 0 0 ;
+    height: 100px;
+    margin: auto;
+}
+.numeros{
+    color: white;
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 10px;
+}
+.numero-activo{
+    color: #005eff;
+}
+.frase{
+    padding: 30px 0;
+    margin: 0;
+    font-size: 20px;
+}
+.caja-blanca h3{
+    letter-spacing: 5px;
+    margin: unset;
+    padding-top: 20px;
+    font-size: 40px;
+}
+.caja-blanca{
+    width: 70%;
+    margin: auto;
+    background-color: white;
+    height: 850px;
+    border: 0;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+}
+.formulario{
+    width: 80%;
+    margin: 0px auto 0px;
+}
+.login{
+    width: 20% !important;
+    margin: 0 auto !important;
+}
+.input-izquierda, .input-derecha{
+    width: 45%;
+    margin: 5px;
+}
+.input-derecha{
+    float: right;
+}
+.input-izquierda{
+    float: left;
+}
+.formulario input, select{
+    font-size: 14px;
+    border: none;
+    border-bottom: 0.5px solid #000000;
+    width: 100%;
+    margin-top: 30px;
+    outline: none;
+    color: black;
+}
+.formulario textarea{
+    border: 0.5px solid #000000;
+    height: 48px;
+    width: 475px;
+    margin-top: 20px;
+}
+.formulario select::placeholder, .formulario input[type="date"]{
+    color: #8a8888;
+}
+
+.lista{
+    text-align: left;
+    width: 25%;
+    margin: auto;
+}
+@media only screen and (max-width: 1024px){
+    .lista, .login{
+        width: 90% !important;
+    }
+}
+.error{
+    color: #ff0000;
+}
+.opciones{
+    color: #ffffff;
+    font-size: 15px;
+    justify-content: flex-end;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+
+}
+.opciones a{
+    color: #ffffff;
+}
+.negra{
+    height: 180px !important;
+}
+.opciones p{
+
+}
+.caja-blanca a{
+    color: #F9B801;
+    text-decoration: none;
+    font-weight: bold;
+}
+.formulario p{
+    font-size: 13px;
+    text-align: left;
+    line-height: 0;
+    color: gray;
+}
+.boton{
+    background: #911818;
+    padding: 15px;
+    border: 1px solid #911818;
+    border-radius: 30px;
+    font-size: 15px;
+    color: #f2f2f2 !important;
+    cursor: pointer;
+
+}
+.acciones{
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+.boton:hover{
+    background: #FFFFFF;
+    color: #911818 !important;
+    border: 1px solid #911818;
+    border-radius: 30px;
+    font-size: 15px;
+    text-decoration: none;
+
+}
+.formulario a{
+    color: black;
+}
+.centrado{
+    text-align: center !important;
+}
+.centrado input{
+    margin: 0 25px 0 25px;
+    width: 100px;
+}
+hr{
+    border : none;
+    height: 50px;
+}

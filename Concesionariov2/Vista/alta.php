@@ -18,7 +18,8 @@ if (!empty($_POST["matricula"]) && !empty($_POST["marca"]) && !empty($_POST["bas
     $observacion = $_POST["observaciones"];
 
     echo "$matricula $marca $motor $cc $color $descripcion $bastidor $modelo $precio $potencia $metal $fecha $observacion";
-    $insert = "Insert into automovil (matricula, marca, motor, cilindrada, color, descripcion, bastidor, modelo, precio, potencia, metalizado, fechaFabricacion, observaciones) values ('$matricula', '$marca', '$motor', '$cc', '$color', '$descripcion', '$bastidor', '$modelo', $precio, $potencia, $metal, '$fecha', '$observacion')";
+    $insert = "Insert into automovil (matricula, id_marca, id_motor, id_color, descripcion, bastidor, modelo, precio, fechaFabricacion, observaciones) values 
+('$matricula', $marca, $motor, '$cc', $color, '$descripcion', '$bastidor', '$modelo', $precio, '$fecha', '$observacion')";
     $result = mysqli_query($link,$insert);
     if ($result){
         $mensaje =  "Alta realizado correctamente";
