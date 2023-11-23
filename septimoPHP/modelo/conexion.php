@@ -11,7 +11,7 @@ function conectar(){
         echo "Existe un error al conectar con el servidor";
 
     }else{
-        echo "Conexión establecida correctamente";
+//        echo "Conexión establecida correctamente";
     }
     return $link;
 }

@@ -109,11 +109,17 @@ html {
     padding-top: 20px;
     font-size: 40px;
 }
+.anchoL{
+    width: 50% !important;
+}
+.altoL{
+    height: 400px !important;
+}
 .caja-blanca{
     width: 70%;
     margin: auto;
     background-color: white;
-    height: 500px;
+    height: 600px;
     border: 0;
     border-radius: 0 0 15px 15px;
     text-align: center;
@@ -123,7 +129,7 @@ html {
     margin: 50px auto 0px;
 }
 .login{
-    width: 20% !important;
+    width: 25% !important;
     margin: 0 auto !important;
 }
 .input-izquierda, .input-derecha{
@@ -153,7 +159,7 @@ html {
     margin: auto;
 }
 @media only screen and (max-width: 1024px){
-    .lista, .login{
+    .lista, .login, .dash, .ancho{
         width: 90% !important;
     }
 }
@@ -175,7 +181,16 @@ html {
 .negra{
     height: 180px !important;
 }
-.opciones p{
+.mensajeL{
+    width: 25%;
+    background-color: #45BDA4;
+    margin: 30px auto auto auto;
+    color: white;
+    border:1px solid #45BDA4;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 .caja-blanca a{
@@ -224,4 +239,25 @@ html {
 hr{
     border : none;
     height: 50px;
+}
+.tabla-cliente{
+    width: 90%;
+    border-collapse: collapse;
+    margin: 50px auto;
+
+
+}
+.tabla-cliente th{
+    background-color: black;
+    color: #FFFFFF;
+    padding: 5px 0;
+    text-align: center;
+    font-weight: bold;
+}
+.tabla-cliente td{
+    text-align: center;
+}
+.tabla-cliente tr:nth-child(even){
+    background-color: #f2f2f2;
+
 }
