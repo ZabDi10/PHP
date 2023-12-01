@@ -1,0 +1,50 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Color de fondo del cuerpo */
+}
+h1 {
+    color: #f8731d; /* Color del título */
+    text-align: center;
+}
+
+h3{
+    color: red;
+    text-align: center;
+
+}
+form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #ffffff; /* Color de fondo del formulario */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra del formulario */
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555555; /* Color del texto de la etiqueta */
+}
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7; /* Color del borde del campo de entrada */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: #f8731d; /* Color de fondo del botón de enviar */
+    color: #ffffff; /* Color del texto del botón de enviar */
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #f8731d; /* Cambio de color al pasar el ratón sobre el botón de enviar */
+}
+/* Puedes agregar estilos adicionales según sea necesario */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 20%;
+    height: 20%;
+}
