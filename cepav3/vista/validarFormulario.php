@@ -54,8 +54,10 @@ if (!empty($_POST["nombre"]) && !empty($_POST["nivel"])&& !empty($_POST["telefon
 		$result = mysqli_query($link, $insertarAlumno);
 	}
 	if ($result){
+        mysqli_close($link);
 	    header("Location:http://localhost:63342/PHP/cepav3/vista/contacto.php?");
 	}else{
+        mysqli_close($link);
 	    header("Location:http://localhost:63342/PHP/cepav3/vista/formulario.php?mensaje=$mensaje");
 	    echo "El correo electrónico ya está registrado.";
 

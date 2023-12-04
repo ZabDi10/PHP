@@ -3,32 +3,20 @@ session_start();
 include "header.php";
 include "../modelo/conexion.php"
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Inscripción</title>
-</head>
 <body class="formulario">
 <h1>Formulario de Inscripción</h1>
-
-<!--    <h3 class="m1">-->
          <?php
             if (isset($_GET['mensaje1'])){
                 echo "<div class=\"alert alert-success centrar\">
-            <strong>Felicidades! </strong>" . $_GET['mensaje1'];
+            <strong>Felicidades! </strong>" . $_GET['mensaje1']. "<div/>";
             }
             ?>
-<!--    </h3>-->
-<!--    <h3 class="error">-->
         <?php
         if (isset($_GET['mensaje'])){
             echo "<div class=\"alert alert-danger centrar\">
             <strong>Cuidado! </strong>" . $_GET['mensaje'] . "</div>";
         }
         ?>
-<!--    </h3>-->
     <form action="validarFormulario.php" method="post" novalidate>
         <!-- Nombre del alumno -->
         <label for="nombre">Nombre del Alumno:</label>
@@ -83,4 +71,7 @@ include "../modelo/conexion.php"
         <input type="submit" value="Enviar" >
     </form>
 </body>
-</html>
+<?php
+include "footer.php";
+?>
+

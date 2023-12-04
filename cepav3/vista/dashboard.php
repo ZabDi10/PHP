@@ -2,7 +2,7 @@
 	session_start();
 	include "header.php";
 	if (!isset($_SESSION["usuario"])){
-		header("Location:http:http://localhost:63342/PHP/cepav3/vista/loginAdmin.php?mensaje=Usuario no autprizado");
+		header("Location:http://localhost:63342/PHP/cepav3/vista/loginAdmin.php?mensaje=Usuario no autorizado");
 	}
 
 ?>

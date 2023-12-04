@@ -12,5 +12,5 @@
 	}
 
 	session_destroy();
-	header("Location:http://localhost:63342/PHP/cepav3/vista/login.php");
+	header("Location:http://localhost:63342/PHP/cepav3/vista/loginAdmin.php");
 ?>

@@ -2,11 +2,11 @@
 	include "../modelo/conexion.php";
 	global $link;
 	$link=conectar();
+    $nombre=$_POST["nombre"];
+    $usuario = $_POST["usuario"];
 
 	if (!empty($_POST["usuario"]) && !empty($_POST["usuario2"]) && !empty($_POST["pass"] && !empty($_POST["nombre"]))) {
-		$nombre=$_POST["nombre"];
-		$usuario = $_POST["usuario"];
-		$usuario2 = $_POST["usuario2"];
+        $usuario2 = $_POST["usuario2"];
 		$pass = $_POST["pass"];
 		$paso=true;
 		$mensaje="";
@@ -43,20 +43,21 @@
 
 			$result = mysqli_query($link, $insertarUser);
 			if ($result) {
+                mysqli_close($link);
 				$mensaje = "Alta realizada correctamente ya puede iniciar sesion";
 				header("Location:http://localhost:63342/PHP/cepav3/vista/loginAdmin.php?mensaje=$mensaje");
 			} else {
+                mysqli_close($link);
 				$mensaje = "Existe un error al relizar el alta";
 				header("Location:http://localhost:63342/PHP/cepav3/vista/registroAdmin.php?mensaje=$mensaje");
 			}
 		}else{
-			mysqli_close($link);
-	header("Location:http://localhost:63342/PHP/cepav3/vista/registroAdmin.php?mensaje=$mensaje");
+	        header("Location:http://localhost:63342/PHP/cepav3/vista/registroAdmin.php?mensaje=$mensaje&nombre=$nombre&email=$usuario");
 		}
 
 	}else{
 		$mensaje="Todos los campos son requeridos";
-		header("Location:http://localhost:63342/PHP/cepav3/vista/registroAdmin.php?mensaje=$mensaje");
+		header("Location:http://localhost:63342/PHP/cepav3/vista/registroAdmin.php?mensaje=$mensaje&nombre=$nombre&email=$usuario");
 	}
 	function validarEmail($email)
 	{

@@ -1,5 +1,9 @@
 <?php
+session_start();
 include "header.php";
+if (!isset($_SESSION["usuario"])){
+    header("Location:http://localhost:63342/PHP/cepav3/vista/loginAdmin.php?mensaje=Usuario no autorizado");
+}
 ?>
 <body>
     <h1>ACTUALIZAR ESTUDIOS</h1>
@@ -81,5 +85,6 @@ include "header.php";
         }
         mysqli_close($link);
     ?>
+    <a href="insertarNivelEstudios.php">Volver</a>
 </body>
 
