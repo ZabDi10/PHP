@@ -6,7 +6,7 @@ if (!isset($_SESSION["usuario"])){
 }
 ?>
 <body>
-    <h1>ACTUALIZAR ESTUDIOS</h1>
+    <h1 class="centrarTitulo">ACTUALIZAR ESTUDIOS</h1>
     <?php
         include "../modelo/conexion.php";
         $link=conectar();
@@ -28,12 +28,12 @@ if (!isset($_SESSION["usuario"])){
         if(isset($_GET["opcion"]) && $_GET["opcion"]=="delete"){
             $consultaDelete="delete from nivel_estudios where id=".$_GET["id"].";";
 
-            echo "<br>".$consultaDelete;
+//            echo "<br>".$consultaDelete;
 
             $resultadoDelete=mysqli_query($link,$consultaDelete);
 
             if ($resultadoDelete){
-                echo "<br>Registro eliminado correctamente";
+                echo "<div class=\"alert alert-danger centrarAlerta\">Registro eliminado correctamente</div>";
             }else{
                 echo "<br>Existe un error al borrar el registro";
             }
@@ -55,9 +55,9 @@ if (!isset($_SESSION["usuario"])){
             echo"</td>";
             echo"<td>";
 
-            echo"<a href=\"?id=".$row["id"] ."&opcion=update\">Actualizar</a> / " ; //Actualiza por medio de la url
+            echo"<a href=\"?id=".$row["id"] ."&opcion=update\"><span class=\"material-symbols-outlined\">edit_note</span></a>" ; //Actualiza por medio de la url
 
-            echo"<a href=\"?id=".$row["id"]."&opcion=delete\">Borrar</a>"; //Borrar por medio de la url
+            echo"<a href=\"?id=".$row["id"]."&opcion=delete\"><span class=\"material-symbols-outlined\">delete</span></a>"; //Borrar por medio de la url
 
             echo"</td>";
             echo"</tr>";

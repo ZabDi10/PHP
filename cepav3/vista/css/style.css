@@ -298,7 +298,7 @@ input {
     color: #ffffff !important;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 16px;
 }

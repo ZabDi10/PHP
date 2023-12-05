@@ -1,31 +1,32 @@
 
 <?php
-session_start();
-include "header.php";
-if (!isset($_SESSION["usuario"])){
-    header("Location:http://localhost:63342/PHP/cepav3/vista/loginAdmin.php?mensaje=Usuario no autorizado");
-}
-include "../modelo/conexion.php";
-$link=conectar();
-
-if ($_POST){
-    $nivelEstudios=$_POST["nivel_estudios"];
-    $insertar="insert into nivel_estudios (nombre_estudios) values ('$nivelEstudios');";
-    $resultadoInsert=mysqli_query($link,$insertar);
-    if($resultadoInsert){
-        echo "<br>Registro correcto";
-    }else{
-        echo "<br>Error";
+    session_start();
+    include "header.php";
+    if (!isset($_SESSION["usuario"])){
+        header("Location:http://localhost:63342/PHP/cepav3/vista/loginAdmin.php?mensaje=Usuario no autorizado");
     }
-}
-$consulta="Select * from nivel_estudios";
+    include "../modelo/conexion.php";
+    $link=conectar();
 
-$resultado=mysqli_query($link,$consulta);
+    if ($_POST){
+        $nivelEstudios=$_POST["nivel_estudios"];
+        $insertar="insert into nivel_estudios (nombre_estudios) values ('$nivelEstudios');";
+        $resultadoInsert=mysqli_query($link,$insertar);
+        if($resultadoInsert){
+            echo "<div class=\"alert alert-success centrarAlerta\">Registro realizado correctamente</div>";
+        }else{
+            echo "<div class=\"alert alert-danger centrarAlerta\">Contacte con el administrador</div>";
+        }
+    }
+    $consulta="Select * from nivel_estudios";
 
-while($row=mysqli_fetch_array($resultado))
-{
-    echo "<li>".$row['nombre_estudios']."</li>";
-}
+    $resultado=mysqli_query($link,$consulta);
+    echo "<div class='lista4'><ul class='lista4'>";
+    while($row=mysqli_fetch_array($resultado))
+    {
+        echo "<li>".$row['nombre_estudios']."</li>";
+    }
+    echo "</ul></div>";
 ?>
 <hr>
 <h2>Nuevo Registro de Estudios</h2>

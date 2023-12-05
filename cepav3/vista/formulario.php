@@ -8,7 +8,7 @@ include "../modelo/conexion.php"
          <?php
             if (isset($_GET['mensaje1'])){
                 echo "<div class=\"alert alert-success centrar\">
-            <strong>Felicidades! </strong>" . $_GET['mensaje1']. "<div/>";
+            <strong>Felicidades! </strong>" . $_GET['mensaje1']. "</div>";
             }
             ?>
         <?php
@@ -41,12 +41,6 @@ include "../modelo/conexion.php"
             }
             mysqli_free_result($result)
             ?>
-
-
-            <!--		<option value="primaria">Primaria</option>-->
-            <!--		<option value="secundaria">Secundaria</option>-->
-            <!--		<option value="preparatoria">Preparatoria</option>-->
-            <!--		<option value="universidad">Universidad</option>-->
         </select><br>
 
         <!-- Número de teléfono -->
