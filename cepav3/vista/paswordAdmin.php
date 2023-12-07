@@ -20,26 +20,30 @@
 		<span class="numero-activo">Cambiar Contraseña</span>
 	</div>
 </div>
-<div class="cambiarPass">
-	<form action="" class="loginAdmin" method="get">
+<div class="loginAdmin">
+	<form action="" class="cambiarPass loginAdmin" method="get">
 		<input type="email" name="email" placeholder="Email"  required>
 		<input type="password" name="pass" placeholder="Contraseña" required>
 		<input type="password" name="pass2" placeholder="Repetir Contraseña">
-		<input type="submit" class="button" value="Cambiar">
-		<input type="button" class="button" onclick="history.back()" value="Cancelar"><div class="criterios">
-
-            <h5>Su contraseña debe tener</h5>
-            <div>
-                <ul class="lista">
-                    <li>Minúscula / Mayúscula</li>
-                </ul>
-                <ul class="lista">
-                    <li>8 carácteres / 1 Números</li>
-                </ul>
-                <ul class="lista">
-                    <li>Símbolos</li>
-                </ul>
+		<div class="botonesCambiar">
+            <input type="button" class="button" onclick="history.back()" value="Cancelar">
+            <input type="submit" class="button" value="Cambiar">
+        </div>
+            <div class="criterios">
+                <h5>Su contraseña debe tener</h5>
+                <div>
+                    <ul class="lista">
+                        <li>Minúscula / Mayúscula</li>
+                    </ul>
+                    <ul class="lista">
+                        <li>8 carácteres / 1 Números</li>
+                    </ul>
+                    <ul class="lista">
+                        <li>Símbolos</li>
+                    </ul>
+                </div>
             </div>
+
 		<?php
 			if (isset($_GET["mensaje"])){
 				echo "<p class='error'>".$_GET['mensaje']."</p>";

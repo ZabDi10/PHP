@@ -134,7 +134,14 @@ img {
     padding: 60px;
 }
 .cambiarPass{
-    display: flex;
-    width: 50%;
+    width: 25% !important;
     margin: auto;
+}
+.botonesCambiar{
+    display: flex;
+
+}
+.botonesCambiar .button{
+    margin: 0 20px 10px 20px;
+    width: 150px;
 }
