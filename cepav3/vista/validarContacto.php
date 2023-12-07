@@ -53,11 +53,11 @@
 
 
 			$fila=mysqli_fetch_assoc($result);
-				$idalumno=  $fila['id'];
+            $idAlumno =  $fila['id'];
 
 
 			$insertarContacto = "insert into datos_contacto (nombre,apellidos, telefono, email, id_relacion, id_alumno) values 
-            ('$nombre','$apellidos',$telefono,'$email','$parentesco', $idalumno);";
+            ('$nombre','$apellidos',$telefono,'$email',$parentesco, $idAlumno);";
 			echo "<br>$insertarContacto";
 			$result = mysqli_query($link, $insertarContacto);
 

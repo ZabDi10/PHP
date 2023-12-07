@@ -21,43 +21,55 @@
 	<meta name="viewport"
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Aztualizar</title>
+	<title>Actualizar</title>
 </head>
-<body>
+<body class="formulario">
 <div class="caja-negra">
 	<div class="numeros">
-		<span class="numero-activo">Aztualizar Cliente</span>
+		<span class="numero-activo">Actualizar Datos</span>
 	</div>
 </div>
-<div class="caja-blanca">
-	<form id="formulario" method="post" class="formulario" action="acRegistro.php" novalidate>
+<div>
+	<form id="formulario" method="post" action="acRegistro.php">
 		<input type="hidden" value="<?=$row['id'] ?>" name="id">
-		<div class="input-izquierda">
-			<input class="validar" type="text" required id="dni" name="dni" placeholder="DNI" value="<?=$row['dni'] ?>">
-			<p>00000000A</p>
-			<input class="validar" type="email" id="email" name="email" placeholder="EMAIL" required
-			       value="<?=$row['email'] ?>">
-			<p>usuario@dominio.ext</p>
-            <input class="validar" type="email" id="email" name="email2" placeholder="REPETIR EMAIL" required
-                   value="<?=$row['email'] ?>">
-            <p>usuario@dominio.ext</p>
-			<input class="validar" type="text" id="direccion" name="direccion" placeholder="DIRECCIÓN" required
-			       value="<?=$row['direccion'] ?>">
-			<p>Calle Falsa, 1234</p>
-			<input class="validar" type="text" id="movil" name="movil" placeholder="TELÉFONO MÓVIL" required
-			       value="<?=$row['telefono'] ?>">
-			<p>000 000 000</p>
-		</div>
-		<div class="input-derecha">
-			<input type="text" name="nombre" required placeholder="NOMBRE" value="<?=$row['nombre'] ?>">
-			<p>Ej: María</p>
-			<input type="text" required placeholder="NIVEL DE ESTUDIOS" name="nivelEstudios" value="<?=$row['id_estudios']
-			?>">
-			<p>Ej: Secundaria</p>
-			<input type="text" placeholder="APELLIDOS" name="apellidos" value="<?=$row['apellidos'] ?>">
-			<p>Ej: Martinez</p>
-			<p>Indica tu edad. Mínimo 18 años</p>
-			<input type="number" required min="18" max="85" placeholder="EDAD" name="edad"value="<?=$row['edad'] ?>">
+		<div>
+            <!--Nombre-->
+            <label for="nombre">Nombre del Alumno:</label>
+            <input type="text" name="nombre" placeholder="NOMBRE" value="<?=$row['nombre'] ?>">
+
+            <!--Apellidos-->
+            <label for="apellidos">Apellidos del Alumno:</label>
+            <input type="text" placeholder="APELLIDOS" name="apellidos" value="<?=$row['apellidos'] ?>">
+            <!--EDAD-->
+            <label for="edad">Edad:</label>
+            <input type="text" placeholder="Edad" name="edad" value="<?=$row['edad'] ?>">
+            <!-- Nivel de estudios -->
+            <label for="nivel">Nivel de Estudios:</label>
+            <select id="nivelEstudios" name="nivelEstudios" required>
+                <?php
+                echo "<option  value=" . $row['id_estudios'] . ">" . $row['id_estudios'] . "</option>";
+                $link=conectar();
+                $queryNivel="select * from nivel_estudios;";
+                $result=mysqli_query($link,$queryNivel);
+                while($fila=mysqli_fetch_assoc($result)){
+                    echo "<option  value=" . $fila['id'] . ">" . $fila['nombre_estudios'] . "</option>";
+                }
+                mysqli_free_result($result)
+                ?>
+            </select>
+            <label for="telefono">Número de Teléfono:</label>
+            <input class="validar" type="text" id="movil" name="movil" placeholder="TELÉFONO MÓVIL" value="<?=$row['telefono'] ?>">
+
+            <label for="email">Correo Electrónico:</label>
+			<input class="validar" type="email" id="email" name="email" placeholder="EMAIL" value="<?=$row['email'] ?>">
+            <label for="email">Repetir Correo Electrónico:</label>
+            <input class="validar" type="email" id="email" name="email2" placeholder="REPETIR EMAIL" value="<?=$row['email'] ?>">
+
+            <label for="direccion">Dirección:</label>
+			<input class="validar" type="text" id="direccion" name="direccion" placeholder="DIRECCIÓN" value="<?=$row['direccion'] ?>">
+            <!--DNI-->
+            <label for="dni">Dni:</label>
+            <input class="validar" type="text" id="dni" name="dni" placeholder="00000000X" value="<?=$row['dni'] ?>">
 		</div>
 		<div class="acciones">
 			<p class="centrado">

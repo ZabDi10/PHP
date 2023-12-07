@@ -1,5 +1,9 @@
 <?php
-    include "header.php"
+    include "header.php";
+    session_start();
+    if(!isset($_SESSION["usuario"])){
+        header("Location:http://localhost:63342/PHP/cepav3/vista/loginAdmin.php?mensaje=Usuario no autorizado");
+    }
 ?>
 <!doctype html>
 <html lang="es">
@@ -10,32 +14,38 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Cambio de contraseña</title>
 </head>
-<body>
-<div class="caja-negra">
+<body class="dash">
+<div>
 	<div class="numeros">
 		<span class="numero-activo">Cambiar Contraseña</span>
 	</div>
 </div>
-<div class="caja-blanca">
-	<form action="" class="login" method="get">
+<div class="cambiarPass">
+	<form action="" class="loginAdmin" method="get">
 		<input type="email" name="email" placeholder="Email"  required>
 		<input type="password" name="pass" placeholder="Contraseña" required>
 		<input type="password" name="pass2" placeholder="Repetir Contraseña">
-		<input type="submit" class="boton" value="Cambiar">
-		<input type="button" class="boton" onclick="history.back()" value="Cancelar">
-		<h4>La contraseñas deben cumplir los sigueintes criterios</h4>
-		<ul class="lista">
-			<li>Longitude 8 caracteres</li>
-			<li>Al menus una mayuscula</li>
-			<li>Al menus una minuscula</li>
-			<li>Al menus un numero</li>
-		</ul>
+		<input type="submit" class="button" value="Cambiar">
+		<input type="button" class="button" onclick="history.back()" value="Cancelar"><div class="criterios">
+
+            <h5>Su contraseña debe tener</h5>
+            <div>
+                <ul class="lista">
+                    <li>Minúscula / Mayúscula</li>
+                </ul>
+                <ul class="lista">
+                    <li>8 carácteres / 1 Números</li>
+                </ul>
+                <ul class="lista">
+                    <li>Símbolos</li>
+                </ul>
+            </div>
 		<?php
 			if (isset($_GET["mensaje"])){
 				echo "<p class='error'>".$_GET['mensaje']."</p>";
 			}
 		?>
-</div>
+    </div>
 
 <?php
 

@@ -7,17 +7,21 @@
     }
     include "../modelo/conexion.php";
     $link=conectar();
-
-    if ($_POST){
-        $nivelEstudios=$_POST["nivel_estudios"];
-        $insertar="insert into nivel_estudios (nombre_estudios) values ('$nivelEstudios');";
-        $resultadoInsert=mysqli_query($link,$insertar);
-        if($resultadoInsert){
-            echo "<div class=\"alert alert-success centrarAlerta\">Registro realizado correctamente</div>";
+    if (isset($_POST["nivel_estudios"])){
+        if (!empty($_POST["nivel_estudios"])){
+            $nivelEstudios=$_POST["nivel_estudios"];
+            $insertar="insert into nivel_estudios (nombre_estudios) values ('$nivelEstudios');";
+            $resultadoInsert=mysqli_query($link,$insertar);
+            if($resultadoInsert){
+                echo "<div class=\"alert alert-success centrarAlerta\">Registro realizado correctamente</div>";
+            }else{
+                echo "<div class=\"alert alert-danger centrarAlerta\">Ha habido un error contacte con el administrador</div>";
+            }
         }else{
-            echo "<div class=\"alert alert-danger centrarAlerta\">Contacte con el administrador</div>";
+            echo "<div class=\"alert alert-danger centrarAlerta\">Introduzca un nivel de estudios valido</div>";
         }
     }
+
     $consulta="Select * from nivel_estudios";
 
     $resultado=mysqli_query($link,$consulta);

@@ -1,0 +1,237 @@
+/*Está en dashboard.php, */
+.dash{
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+/*Está es dashboard.php*/
+.numeros{
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+}
+/*Se encuentra en Dashboard y en insertarRelación*/
+.caja-blanca h1, .numeros span{
+    color: #157ac0;
+}
+.caja-blanca h3{
+    letter-spacing: 5px;
+    margin: unset;
+    padding-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.caja-blanca{
+    margin: auto;
+    border-radius: 0 0 15px 15px;
+    height: 500px;
+    text-align: center;
+    align-items: center;
+}
+
+.caja-blanca a{
+    text-decoration: none;
+    color: #1b6291;
+    font-weight: bold;
+
+}
+.opciones{
+    width: 40%;
+    font-weight: 14;
+    display: flex;
+    margin: auto;
+    background-color: #2980B9;
+    justify-content: space-between;
+    border-radius: 40px;
+    align-items: center;
+    color: white;
+
+}
+
+.usu2{
+    width: 50%;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+.usu2Botones{
+    display: flex;
+    margin-right: 20px;
+    align-items: center
+}
+.usu2 span{
+   color: #157ac0;
+}
+.usu2 p{
+    margin: 5px !important;
+}
+.opciones a{
+    text-decoration: none;
+}
+.opciones a, .usu2 span{
+    color: #ffffff;
+}
+
+.tabla-cliente, .tabla-estudios{
+    width:100%;
+    border-collapse: collapse;
+    margin: 10px auto 30px auto;
+    font-weight: bold;
+    border: 1px solid black;
+
+}
+.tabla-estudios{
+    width: 50% !important;
+    margin: auto !important;
+    font-size: large;
+
+}
+.tabla-cliente th , .tabla-estudios th{
+    background-color:  #2980b9;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.tabla-cliente th, .tabla-estudios th{
+    padding: 0 25px;
+    border-bottom: 1px solid black;
+}
+
+.tabla-cliente tr:nth-child(odd), .tabla-estudios tr:nth-child(odd){
+    background-color: #8bb5ce;
+}
+.tabla-cliente tr:nth-child(even), .tabla-estudios tr:nth-child(even){
+    background-color: #e7f3ff;
+
+}
+.tabla-estudios tr{
+    text-align: center;
+    color: black;
+}
+.tabla-cliente a, .tabla-estudios a{
+    color: #0746a4;
+}
+
+.boton a{
+    color: white !important;
+}
+.centrar4{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+
+.tituloInsertar{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+/*insertarNivelEstudios*/
+.lista4{
+    text-align: center;
+    display: flex;
+    margin:auto;
+    justify-content: center;
+
+}
+.lista4 ul{
+    list-style:none;
+}
+
+.lista{
+    text-align: center;
+    display: flex;
+    margin:auto;
+    justify-content: center;
+
+}
+.cajaInsertar{
+    height: 250px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+}
+
+.nivelEstudios{
+    margin: auto;
+}
+.nivelEstudios input{
+    width: 70%;
+}
+.nivelEstudios h4{
+    margin: 10px;
+}
+
+.lista4 li{
+    padding: 20px;
+    font-size: 20px;
+}
+
+.botonesRegistro{
+    padding-top: 15px;
+    display: flex;
+
+}
+.botonesInsertar{
+    font-weight: bold;
+    margin: 0 5px 0 5px;
+
+}
+.tituloInsertar u{
+    color: #c4c1c1;
+    text-decoration-thickness: 1px;
+}
+
+/*Archivos Actualizar*/
+.form-update{
+    text-align: center;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.form-update ul{
+    list-style:none;
+}
+
+.form-update li{
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+.centrarTitulo{
+    color: #157ac0;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.centrarVolver{
+    text-align: center;
+    width: 5%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.centrarAlerta{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+.centrarButton{
+    width: 8% !important;
+    margin-bottom: 10px;
+    font-weight: bold;
+}

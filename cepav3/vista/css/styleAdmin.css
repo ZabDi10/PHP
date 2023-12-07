@@ -1,0 +1,140 @@
+/*está en loginAdmin*/
+.admin{
+    background-color: #f0f0f0;
+}
+/*está en loginAdmin, registroAdmin*/
+.loginTitulo{
+    text-align: center;
+    width: 50%;
+    margin: 20px auto;
+}
+.loginAdmin .loginTitulo span{
+     font-size: xx-large;
+     color:  #157ac0;
+ }
+/*está en loginAdmin, registroAdmin*/
+.loginAdmin {
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.loginAdmin form input{
+    margin: 15px 0;
+    width: 80%;
+    color: black;
+}
+
+.loginAdmin form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 20%;
+    margin: 0 auto 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.centrar2, .centrar3{
+    margin: 0 !important;
+}
+/*está en loginAdmin*/
+.centrar2{
+    width: 20%;
+}
+/*está en registroAdmin*/
+.centrar3{
+    width: 25%;
+}
+
+/*Está en registroAdmin*/
+.loginRegistro form{
+    width: 25% !important;
+}
+
+/*No veo ningún loginAdmin label*/
+/*.loginAdmin label {*/
+/*    color: #000000;*/
+/*    display: block;*/
+/*    font-size: 14px;*/
+/*    margin-bottom: 8px;*/
+/*}*/
+.loginAdmin form p{
+    margin: 0;
+}
+/*Inputs de todos los forms*/
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/*está en dashboard, insertarNivelEstudios, insertarRelacion, loginAdmin, passwordAdmin, registroAdmin, updateNivelEstudios, udateRelacion*/
+.button {
+    background-color: #3498db;
+    color: #ffffff !important;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+/*está en registroAdmin*/
+.criterios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.criterios div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.criterios div ul{
+    list-style: none;
+}
+/*registroAdmin*/
+/*está en passwordAdmin, registroAdmin*/
+.lista{
+    font-size: 14px;
+    margin: 0;
+}
+
+/* index.php,  */
+.container2 {
+    display: flex;
+    align-items: center
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+}
+/*está en index.php */
+.texto3 {
+    flex-grow: 5;
+    text-align: center;
+    padding: 60px;
+}
+.cambiarPass{
+    display: flex;
+    width: 50%;
+    margin: auto;
+}

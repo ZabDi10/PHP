@@ -1,7 +1,11 @@
 <?php
-	 include "header.php"
+	 include "header.php";
+     session_start();
+    if ((isset($_SESSION["usuario"]))){
+        header("Location:http://localhost:63342/PHP/cepav3/vista/dashboard.php");
+    }
 ?>
-<body>
+<body class="admin">
 
 <div class="loginAdmin">
     <div class="loginTitulo">
@@ -25,7 +29,4 @@
     <h3 class="formulario error">
     </h3>
 </div>
-<?php
-include "footer.php";
-?>
 </body>

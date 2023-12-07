@@ -17,20 +17,20 @@ include "../modelo/conexion.php"
             <strong>Cuidado! </strong>" . $_GET['mensaje'] . "</div>";
         }
         ?>
-    <form action="validarFormulario.php" method="post" novalidate>
+    <form action="validarFormulario.php" method="post" >
         <!-- Nombre del alumno -->
         <label for="nombre">Nombre del Alumno:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Pedro" required><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Pedro" required ><br>
 
         <label for="apellidos">Apellidos del Alumno:</label>
-        <input type="text" id="apellidos" name="apellidos" placeholder="Muñoz Molinos" required><br>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Muñoz Molinos" ><br>
 
         <label for="edad">Edad:</label>
-        <input type="number" id="edad" name="edad" required placeholder="35"><br>
+        <input type="number" id="edad" name="edad" placeholder="35"><br>
 
         <!-- Nivel de estudios -->
         <label for="nivel">Nivel de Estudios:</label>
-        <select id="nivel" name="nivel" required>
+        <select id="nivel" name="nivel" >
             <option value=""></option>
             <?php
             $link=conectar();
@@ -45,27 +45,25 @@ include "../modelo/conexion.php"
 
         <!-- Número de teléfono -->
         <label for="telefono">Número de Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required placeholder="666666666"><br>
+        <input type="tel" id="telefono" name="telefono" placeholder="666666666"><br>
 
         <!-- Correo electrónico -->
         <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required placeholder="cepa@ejemplo.com"><br>
+        <input type="email" id="email" name="email" placeholder="cepa@ejemplo.com"><br>
 
         <!-- Dirección -->
         <label for="direccion">Dirección:</label>
-        <input type="text" id="direccion" name="direccion" required placeholder="Larios, 43 6ºB Málaga 28006"><br>
+        <input type="text" id="direccion" name="direccion" placeholder="Larios, 43 6ºB Málaga 28006"><br>
 
 
-        <!-- Fecha de Nacimiento -->
+        <!-- DNI -->
         <label for="dni">Dni:</label>
-        <input type="text" id="dni" name="dni" required placeholder="00000000X"><br>
+        <input type="text" id="dni" name="dni" placeholder="00000000X"><br>
 
 
 
         <input type="submit" value="Enviar" >
     </form>
 </body>
-<?php
-include "footer.php";
-?>
+
 

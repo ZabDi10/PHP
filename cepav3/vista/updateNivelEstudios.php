@@ -19,7 +19,7 @@ if (!isset($_SESSION["usuario"])){
             $resultado=mysqli_query($link,$consultaUP);
 
             if($resultado){
-                echo "<br>Registro actualizado con éxito";
+                echo "<div class=\"alert alert-success centrarAlerta\">Registro Actualizado</div>";
             }else{
                 echo "<br>Un error ha ocurrido en la actualización";
             }
