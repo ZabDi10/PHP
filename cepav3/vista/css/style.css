@@ -213,4 +213,23 @@ footer img {
     height: auto; /* Para mantener la proporción de la imagen */
     max-width: 100%; /* Asegura que la imagen no sea más ancha que su tamaño original */
     display: block; /* Elimina el espacio adicional por defecto debajo de la imagen */
+
+}
+
+
+.informacion-contacto{
+    margin: -200px auto;
+    padding-left: 120px;
+    text-align: left;
+    width: 25%;
+    font-size: large;
+}
+
+.orange{
+    color: orange;
+}
+
+.desc a{
+    text-decoration: none;
+    color:black;
 }

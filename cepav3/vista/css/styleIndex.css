@@ -70,12 +70,11 @@ div.gallery img {
     box-shadow: #717171;
 }
 
-div.desc {
+div.desc{
     padding: 15px;
     text-align: center;
     box-shadow: #717171;
 }
-
 
 .responsive {
     padding: 0 6px;
@@ -191,6 +190,7 @@ div.desc {
     text-align: center;
 
 }
+
 
 .column {
     flex: 33.33%;

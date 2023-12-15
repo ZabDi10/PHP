@@ -28,7 +28,7 @@
 
 
 		if (!validarPass($pass)) {
-			$mensaje=$mensaje."<br>El password NOO cumple los requisitos de complejidad";
+			$mensaje=$mensaje."<br>El password NO cumple los requisitos de complejidad";
 			$paso=false;
 		}
 
@@ -44,7 +44,7 @@
 			$result = mysqli_query($link, $insertarUser);
 			if ($result) {
                 mysqli_close($link);
-				$mensaje = "Alta realizada correctamente ya puede iniciar sesion";
+				$mensaje = "Alta realizada correctamente. Ya puede iniciar sesion";
 				header("Location:http://localhost:63342/PHP/cepav3/vista/loginAdmin.php?mensaje=$mensaje");
 			} else {
                 mysqli_close($link);

@@ -64,6 +64,10 @@ include "../modelo/conexion.php"
 
         <input type="submit" value="Enviar" >
     </form>
+<?php
+include "footer.php";
+?>
+
 </body>
 
 
