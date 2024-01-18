@@ -8,12 +8,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo-ampa-color.png" type="image/x-icon">
     <title>Ampa</title>
 </head>
 <body>
     <nav class="header">
         <div class="logo-container">
-            <img src="img/logo-ampa.png" alt="logo">
+            <img src="img/logo-ampa-color.png" alt="logo">
         </div>
         <ul class="nav-links">
             <li><a href="index.php">Inicio</a></li>

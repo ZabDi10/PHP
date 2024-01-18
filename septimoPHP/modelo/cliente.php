@@ -143,19 +143,24 @@ class cliente
         $this->edad = $edad;
     }
 }
-if (!empty($_SESSION["dni"]) && !empty($_SESSION["movil"]) && !empty($_SESSION["email"]) && !empty($_SESSION["nombre"]) && !empty($_SESSION["apellido"]) && !empty($_SESSION["apellido2"]) && !empty($_SESSION["edad"]))
-{
-    $unCliente = new cliente($_SESSION["dni"], $_SESSION["movil"], $_SESSION["email"], $_SESSION["nombre"], $_SESSION["apellido"], $_SESSION["apellido2"], $_SESSION["edad"]);
-    var_dump($unCliente);
-    echo '<br>Cliente: '.$_SESSION['nombre'].'<br> Apellidos: '.$_SESSION['apellido'].' '.$_SESSION['apellido2'].'<br> DNI: '.$_SESSION['dni'].'<br> Movil: '.$_SESSION['movil'].'<br> Email: '.$_SESSION['email'].'<br>Edad: '.$_SESSION['edad'];
 
-    include "conexion.php";
-    $link = conectar();
-    $consultaInsert = "insert into cliente (nombre, apellido1, apellido2, email, edad, dni, telefono) values ('".$unCliente->nombre."','" . $unCliente->apellido."','" . $unCliente->apellido2."','" . $unCliente->email."'," . $unCliente->edad .",'" . $unCliente->dni."'," . $unCliente->movil.")";
-    $resultado = mysqli_query($link,$consultaInsert);
-    if ($resultado) {
-        echo "<br> Registro insertado correctamente.";
-    }else{
-        echo "<br> Existe un error al insertar el Registro";
+try {
+    if (!empty($_SESSION["dni"]) && !empty($_SESSION["movil"]) && !empty($_SESSION["email"]) && !empty($_SESSION["nombre"]) && !empty($_SESSION["apellido"]) && !empty($_SESSION["apellido2"]) && !empty($_SESSION["edad"]))
+    {
+        $unCliente = new cliente($_SESSION["dni"], $_SESSION["movil"], $_SESSION["email"], $_SESSION["nombre"], $_SESSION["apellido"], $_SESSION["apellido2"], $_SESSION["edad"]);
+        var_dump($unCliente);
+        echo '<br>Cliente: '.$_SESSION['nombre'].'<br> Apellidos: '.$_SESSION['apellido'].' '.$_SESSION['apellido2'].'<br> DNI: '.$_SESSION['dni'].'<br> Movil: '.$_SESSION['movil'].'<br> Email: '.$_SESSION['email'].'<br>Edad: '.$_SESSION['edad'];
+
+        include "conexion.php";
+        $link = conectar();
+        $consultaInsert = "insert into cliente (nombre, apellido1, apellido2, email, edad, dni, telefono) values ('".$unCliente->nombre."','" . $unCliente->apellido."','" . $unCliente->apellido2."','" . $unCliente->email."'," . $unCliente->edad .",'" . $unCliente->dni."'," . $unCliente->movil.")";
+        $resultado = mysqli_query($link,$consultaInsert);
+        if ($resultado) {
+            echo "<br> Registro insertado correctamente.";
+        }else{
+            echo "<br> Existe un error al insertar el Registro";
+        }
     }
+}catch (err){
+    echo "<br> Existe un error al insertar el Registro";
 }
