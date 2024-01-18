@@ -78,7 +78,7 @@ body {
     }
     .main h2{
         font-size: 20px;
-        /*width: 78%;*/
+        width: 78%;
     }
     .row{
         display: flex;
